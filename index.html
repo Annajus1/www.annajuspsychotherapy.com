@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anna Juś Psychoterapia</title>
+<style>
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f0f4f8;
+    color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+header {
+    background-color: #003366;
+    padding: 60px 20px 20px 20px;
+    text-align: center;
+    color: #fff;
+}
+header h1 {
+    margin: 0 0 30px 0;
+    font-size: 32px;
+}
+header p {
+    font-style: italic;
+    font-size: 20px;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+nav ul li a:hover {
+    text-decoration: underline;
+}
+section {
+    padding: 40px 20px;
+    flex: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    display: none; /* domyślnie wszystkie ukryte */
+}
+section.active {
+    display: block;
+}
+footer {
+    background-color: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+input, textarea, button {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+button {
+    background-color: #003366;
+    color: white;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #001f4d;
+}
+#success-message {
+    display: none;
+    color: green;
+    margin-bottom: 10px;
+}
+#error-message {
+    display: none;
+    color: red;
+    margin-bottom: 10px;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Anna Juś Psychoterapia</h1>
+<p>„Nie osiąga się pełni poprzez odcinanie części samego siebie, lecz przez integrację przeciwieństw.” – Carl Gustav Jung</p>
+<nav>
+<ul>
+<li><a href="#" data-section="about">O mnie</a></li>
+<li><a href="#" data-section="therapy">Psychoterapia</a></li>
+<li><a href="#" data-section="offer">Oferta</a></li>
+<li><a href="#" data-section="contact">Kontakt</a></li>
+</ul>
+</nav>
+</header>
+
+<section id="about" class="active">
+<h2>O mnie</h2>
+<p>Nazywam się Anna Juś. Jestem psychologiem i psychoterapeutką.</p>
+<p>Ukończyłam 4-letnią Szkołę Psychoterapii Systemowej Indywidualnej, Par i Rodzin w Wielkopolskim Towarzystwie Terapii Systemowej w Poznaniu (certyfikat WTTS), uzyskując kwalifikacje do samodzielnego prowadzenia poradnictwa i psychoterapii systemowej.</p>
+<p>Posiadam również wykształcenie medyczne, jestem doktorem farmakologii. Mam wieloletnie doświadczenie pracy w międzynarodowym środowisku naukowym i biznesowym, m.in. przy opracowywaniu i badaniu nowych leków.</p>
+<p>Regularnie uczestniczę w warsztatach, kursach i szkoleniach w certyfikowanych ośrodkach w Polsce (WTTS, PTPP) i za granicą (The Tavistock Institute of Medical Psychology, di Giunti Psicologia.io). Moją pracę regularnie poddaję superwizji.</p>
+<p>Ukończyłam również kurs Chrześcijańskiej Terapii Integralnej skupionej na pomocy osobom doświadczającym neurotyczności religijnej. Aktualnie uczestniczę w rocznym szkoleniu certyfikacyjnym Organic Intelligence nt. Post-Trauma Growth w Stanach Zjednoczonych.</p>
+</section>
+
+<section id="therapy">
+<h2>Psychoterapia</h2>
+<p>Pracuję w nurcie systemowym, jednak do mojej praktyki zapraszam również bogactwo innych podejść, głównie psychoanalitycznego, psychodynamicznego i egzystencjalnego, integrując ich zasoby.</p>
+<p>Szczególnie bliskie jest mi podejście terapeutyczne i styl pracy psychoterapeutów tj. Nancy McWilliams, Michael Garrett i Irvin Yalom.</p>
+<p>Prowadzę psychoterapię osób dorosłych, również w języku angielskim. Bardzo cenię sobie możliwość pracy terapeutycznej on-line.</p>
+<p>Zajmuję się m.in. trudnościami w relacjach, problemami w obszarze pracy, zaburzeniami osobowości, zaburzeniami psychosomatycznymi, lękiem, depresją, uzależnieniami, zaburzeniami psychicznymi i emocjonalnymi oraz rozwojem osobistym.</p>
+<p>Jestem otwarta na wszystkie osoby szukające pomocy, niezależnie od orientacji seksualnej, wyznania, poglądów etc. Mam doświadczenie w pracy z osobami mieszkającymi za granicą, zmagającymi się z różnicami kulturowymi.</p>
+</section>
+
+<section id="offer">
+<h2>Oferta</h2>
+<p><strong>Cennik:</strong></p>
+<ul>
+<li>Konsultacja psychoterapeutyczna 1h - 250 PLN / 65 EUR</li>
+<li>Sesja psychoterapeutyczna 50 min. - 250 PLN / 65 EUR</li>
+<li>Consultation / Psychotherapy session in English - 250 PLN / 65 EUR</li>
+</ul>
+<p>Bezpłatne odwoływanie sesji powinno nastąpić z co najmniej 24 godzinnym wyprzedzeniem, w przypadku późniejszego odwołania obowiązuje całkowita opłata.</p>
+</section>
+
+<section id="contact">
+<h2>Kontakt</h2>
+<div id="success-message">Wiadomość wysłana pomyślnie!</div>
+<div id="error-message">Wystąpił błąd, spróbuj ponownie.</div>
+<form name="contact" method="POST" data-netlify="true">
+<input type="hidden" name="form-name" value="contact">
+<input type="text" name="name" placeholder="Imię i nazwisko" required>
+<input type="email" name="email" placeholder="Adres email" required>
+<textarea name="message" placeholder="Wiadomość" required></textarea>
+<button type="submit">Wyślij</button>
+</form>
+<p>Telefon: +48 605 768 190</p>
+<p>Email: <a href="mailto:anna.jus.aj@gmail.com">anna.jus.aj@gmail.com</a></p>
+</section>
+
+<footer>
+<p>© 2025 Anna Juś Psychoterapia</p>
+</footer>
+
+<script>
+// Zakładki
+const links = document.querySelectorAll('nav ul li a');
+const sections = document.querySelectorAll('section');
+
+links.forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const target = e.target.getAttribute('data-section');
+    sections.forEach(sec => sec.classList.remove('active'));
+    document.getElementById(target).classList.add('active');
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  });
+});
+
+// Formularz Netlify
+const form = document.querySelector('form[name="contact"]');
+const successMsg = document.getElementById('success-message');
+const errorMsg = document.getElementById('error-message');
+
+form.addEventListener('submit', function(e) {
+  e.preventDefault();
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(new FormData(form)).toString()
+  })
+  .then(() => {
+    successMsg.style.display = "block";
+    errorMsg.style.display = "none";
+    form.reset();
+  })
+  .catch(() => {
+    errorMsg.style.display = "block";
+    successMsg.style.display = "none";
+  });
+});
+</script>
+
+</body>
+</html>
